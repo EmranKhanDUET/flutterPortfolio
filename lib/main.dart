@@ -39,37 +39,7 @@ class HomeUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("APPBAR"),
-        backgroundColor: Colors.amber,
-        titleSpacing: 10,
-        centerTitle: false,
-        toolbarHeight: 60,
-        toolbarOpacity: 1,
-        elevation: 0,
-        actions: [
-          IconButton(
-              onPressed: () {
-                MySnackbar("Search", 5, context);
-              },
-              icon: Icon(Icons.search)),
-          IconButton(
-              onPressed: () {
-                MySnackbar("Message", 5, context);
-              },
-              icon: Icon(Icons.message)),
-          IconButton(
-              onPressed: () {
-                MySnackbar("Email", 5, context);
-              },
-              icon: Icon(Icons.email)),
-          IconButton(
-              onPressed: () {
-                MySnackbar("Help", 5, context);
-              },
-              icon: Icon(Icons.help)),
-        ],
-      ),
+
     );
   }
 }
