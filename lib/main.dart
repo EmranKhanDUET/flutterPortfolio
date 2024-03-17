@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
 
@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class HomeUI extends StatelessWidget {
   const HomeUI({super.key});
 
@@ -35,7 +36,6 @@ class HomeUI extends StatelessWidget {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,13 +48,28 @@ class HomeUI extends StatelessWidget {
         toolbarOpacity: 1,
         elevation: 0,
         actions: [
-          IconButton(onPressed: (){MySnackbar("Search", 5, context);}, icon: Icon(Icons.search)),
-          IconButton(onPressed: (){MySnackbar("Message", 5, context);}, icon: Icon(Icons.message)),
-          IconButton(onPressed: (){MySnackbar("Email", 5, context);}, icon: Icon(Icons.email)),
-          IconButton(onPressed: (){MySnackbar("Help", 5, context);}, icon: Icon(Icons.help)),
+          IconButton(
+              onPressed: () {
+                MySnackbar("Search", 5, context);
+              },
+              icon: Icon(Icons.search)),
+          IconButton(
+              onPressed: () {
+                MySnackbar("Message", 5, context);
+              },
+              icon: Icon(Icons.message)),
+          IconButton(
+              onPressed: () {
+                MySnackbar("Email", 5, context);
+              },
+              icon: Icon(Icons.email)),
+          IconButton(
+              onPressed: () {
+                MySnackbar("Help", 5, context);
+              },
+              icon: Icon(Icons.help)),
         ],
       ),
     );
   }
 }
-
