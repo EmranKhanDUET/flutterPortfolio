@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 class HomeUI extends StatelessWidget {
   const HomeUI({super.key});
 
-  MySnackbar(message, delay, context) {
+  mySnackbar(message, delay, context) {
     return ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message),
@@ -41,14 +41,68 @@ class HomeUI extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("APPBAR"),
+        backgroundColor: Colors.amber,
+        titleSpacing: 10,
+        centerTitle: false,
+        toolbarHeight: 60,
+        toolbarOpacity: 1,
+        elevation: 0,
+        actions: [
+          IconButton(
+              onPressed: () {
+                mySnackbar("Search", 5, context);
+              },
+              icon: Icon(Icons.search)),
+          IconButton(
+              onPressed: () {
+                mySnackbar("Message", 5, context);
+              },
+              icon: Icon(Icons.message)),
+          IconButton(
+              onPressed: () {
+                mySnackbar("Email", 5, context);
+              },
+              icon: Icon(Icons.email)),
+          IconButton(
+              onPressed: () {
+                mySnackbar("Help", 5, context);
+              },
+              icon: Icon(Icons.help)),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          MySnackbar("Floating Action Button", 2, context);
+          mySnackbar("Floating Action Button", 2, context);
         },
         child: Icon(Icons.add),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.amber,
         elevation: 20,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "HOME"),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: "SETTING"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "CONTACT"),
+        ],
+        onTap: (int index){
+          if(index==0){
+            mySnackbar("HOME BUTTON", 2, context);
+          }
+          else   if(index==1){
+            mySnackbar("SETTING BUTTON", 2, context);
+          }
+          else   if(index==2){
+            mySnackbar("CONTACT BUTTON", 2, context);
+          }
+        },
+        currentIndex: 1,
+        elevation: 0,
+        // fixedColor: Colors.white,
+        backgroundColor: Colors.amber,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.brown,
+
+
       ),
     );
   }
