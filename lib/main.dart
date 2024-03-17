@@ -53,21 +53,7 @@ class HomeUI extends StatelessWidget {
                 mySnackbar("Search", 5, context);
               },
               icon: Icon(Icons.search)),
-          IconButton(
-              onPressed: () {
-                mySnackbar("Message", 5, context);
-              },
-              icon: Icon(Icons.message)),
-          IconButton(
-              onPressed: () {
-                mySnackbar("Email", 5, context);
-              },
-              icon: Icon(Icons.email)),
-          IconButton(
-              onPressed: () {
-                mySnackbar("Help", 5, context);
-              },
-              icon: Icon(Icons.help)),
+
         ],
       ),
 
@@ -97,6 +83,9 @@ class HomeUI extends StatelessWidget {
 
 
       ),
+
+
+      drawer: Drawer(),
     );
   }
 }
