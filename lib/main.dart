@@ -58,31 +58,6 @@ class HomeUI extends StatelessWidget {
       ),
 
 
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "HOME"),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: "SETTING"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "CONTACT"),
-        ],
-        onTap: (int index){
-          if(index==0){
-            mySnackbar("HOME BUTTON", 2, context);
-          }
-          else   if(index==1){
-            mySnackbar("SETTING BUTTON", 2, context);
-          }
-          else   if(index==2){
-            mySnackbar("CONTACT BUTTON", 2, context);
-          }
-        },
-        currentIndex: 1,
-        elevation: 0,
-        backgroundColor: Colors.amber,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.brown,
-
-
-      ),
 
 
       drawer: Drawer(),
