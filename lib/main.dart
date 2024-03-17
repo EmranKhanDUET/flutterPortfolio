@@ -39,7 +39,17 @@ class HomeUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      appBar: AppBar(
+        title: Text("APPBAR"),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          MySnackbar("Floating Action Button", 2, context);
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.green,
+        elevation: 20,
+      ),
     );
   }
 }
