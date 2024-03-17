@@ -21,6 +21,21 @@ class MyApp extends StatelessWidget {
 class HomeUI extends StatelessWidget {
   const HomeUI({super.key});
 
+  MySnackbar(message, delay, context) {
+    return ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        duration: Duration(seconds: delay),
+        action: SnackBarAction(
+            label: "OK",
+            textColor: Colors.white,
+            backgroundColor: Colors.green,
+            onPressed: () {}),
+      ),
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,10 +48,10 @@ class HomeUI extends StatelessWidget {
         toolbarOpacity: 1,
         elevation: 0,
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.search)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.message)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.email)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.help)),
+          IconButton(onPressed: (){MySnackbar("Search", 5, context);}, icon: Icon(Icons.search)),
+          IconButton(onPressed: (){MySnackbar("Message", 5, context);}, icon: Icon(Icons.message)),
+          IconButton(onPressed: (){MySnackbar("Email", 5, context);}, icon: Icon(Icons.email)),
+          IconButton(onPressed: (){MySnackbar("Help", 5, context);}, icon: Icon(Icons.help)),
         ],
       ),
     );
