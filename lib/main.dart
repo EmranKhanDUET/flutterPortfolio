@@ -53,14 +53,54 @@ class HomeUI extends StatelessWidget {
                 mySnackbar("Search", 5, context);
               },
               icon: Icon(Icons.search)),
-
         ],
       ),
 
 
 
 
-      drawer: Drawer(),
+
+      drawer: Drawer(
+        backgroundColor: Colors.amberAccent,
+        child: ListView(
+          children: [
+            DrawerHeader(
+              padding: EdgeInsets.all(0),
+              decoration: BoxDecoration(color: Colors.deepOrange),
+              child: UserAccountsDrawerHeader(
+                accountName: Text("EMRAN",style: TextStyle(color: Colors.black),),
+                accountEmail: Text("EMRAN@GMAIL.COM",style: TextStyle(color: Colors.black),),
+                decoration: BoxDecoration(color: Colors.white),
+                currentAccountPicture: Image.network("https://static-00.iconduck.com/assets.00/github-icon-2048x2048-eyd5tyuo.png"),
+                onDetailsPressed: (){
+                  mySnackbar("DrawerHeader", 2, context);
+                },
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("HOME"),
+              onTap: () {
+                mySnackbar("HOME", 2, context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text("SETTING"),
+              onTap: () {
+                mySnackbar("SETTING", 2, context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("CONTACT"),
+              onTap: () {
+                mySnackbar("CONTACT", 2, context);
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
