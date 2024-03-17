@@ -71,7 +71,6 @@ class HomeUI extends StatelessWidget {
         ],
       ),
 
-
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "HOME"),
@@ -97,6 +96,8 @@ class HomeUI extends StatelessWidget {
 
 
       ),
+
+
     );
   }
 }
