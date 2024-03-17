@@ -70,14 +70,8 @@ class HomeUI extends StatelessWidget {
               icon: Icon(Icons.help)),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          mySnackbar("Floating Action Button", 2, context);
-        },
-        child: Icon(Icons.add),
-        backgroundColor: Colors.amber,
-        elevation: 20,
-      ),
+
+
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "HOME"),
@@ -97,7 +91,6 @@ class HomeUI extends StatelessWidget {
         },
         currentIndex: 1,
         elevation: 0,
-        // fixedColor: Colors.white,
         backgroundColor: Colors.amber,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.brown,
