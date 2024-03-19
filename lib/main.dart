@@ -25,13 +25,17 @@ class HomeUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
+        body: Center(
+          child:
           // Image.network("https://avatars.githubusercontent.com/u/57840119?v=4"),
-          Image.asset("images/dp.png")
-
-        ],
-      )
+          // Image.asset(
+          //   "images/dp.png",
+          //   height: 200,
+          //   width: 200,
+          //   fit: BoxFit.scaleDown,
+          // ),
+          Image.asset("images/panda.jpg")
+        ),
     );
   }
 }
