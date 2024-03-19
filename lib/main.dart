@@ -26,17 +26,10 @@ class HomeUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(
-          "HELLO World, This is Emran speaking. How are you aLL? lsdfmnksvajk bjkldsfabjklfv bjklasdbjkladbjl bjklsdgafbjklsgabjklg bjklasdbjklasbkjbkj jkjkb",
-          textAlign: TextAlign.center,
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-          style: TextStyle(
-            color: Colors.green,
-            backgroundColor: Colors.pink,
-            fontSize: 20,
-            fontWeight: FontWeight.w100
-          ),
+        child: Icon(
+          Icons.home,
+          size: 400,
+          color: Colors.amber,
         ),
       ),
     );
