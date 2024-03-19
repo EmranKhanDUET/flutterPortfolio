@@ -25,13 +25,13 @@ class HomeUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Icon(
-          Icons.home,
-          size: 400,
-          color: Colors.amber,
-        ),
-      ),
+      body: Column(
+        children: [
+          // Image.network("https://avatars.githubusercontent.com/u/57840119?v=4"),
+          Image.asset("images/dp.png")
+
+        ],
+      )
     );
   }
 }
