@@ -25,27 +25,27 @@ class HomeUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("AppBAR"),
-          backgroundColor: Colors.green,
-        ),
-        body: Container(
-            height: 250,
-            width: 250,
-            margin: EdgeInsets.all(100),
-            padding: EdgeInsets.fromLTRB(20, 30, 40, 50),
-            decoration: BoxDecoration(
-              color: Colors.amber,
-              border: Border.all(
-                width: 10,
-                color: Colors.green,
-              ),
-            ),
-            child: CircleAvatar(
-              child: ClipOval(
-                child: Image.network(
-                    "https://avatars.githubusercontent.com/u/57840119?v=4"),
-              ),
-            )));
+      appBar: AppBar(
+        title: Text("AppBAR"),
+        backgroundColor: Colors.green,
+      ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(
+            height: 200,
+            width: 200,
+            child: Image.network(
+                "https://avatars.githubusercontent.com/u/57840119?v=4"),
+          ),
+          Container(
+            height: 200,
+            width: 200,
+            child: Image.network(
+                "https://avatars.githubusercontent.com/u/57840119?v=4"),
+          ),
+        ],
+      ),
+    );
   }
 }
