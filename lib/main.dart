@@ -29,23 +29,16 @@ class HomeUI extends StatelessWidget {
         title: Text("AppBAR"),
         backgroundColor: Colors.green,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Container(
-            height: 200,
-            width: 200,
-            child: Image.network(
-                "https://avatars.githubusercontent.com/u/57840119?v=4"),
-          ),
-          Container(
-            height: 200,
-            width: 200,
-            child: Image.network(
-                "https://avatars.githubusercontent.com/u/57840119?v=4"),
-          ),
-        ],
-      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.network("https://avatars.githubusercontent.com/u/57840119?v=4",height: 100,width: 100,),
+            Image.network("https://avatars.githubusercontent.com/u/57840119?v=4",height: 100,width: 100,),
+          ],
+        ),
+      )
     );
   }
 }
