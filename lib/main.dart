@@ -26,19 +26,22 @@ class HomeUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: RichText(
+          child: RichText(
         text: TextSpan(
-          text: "Hello ",
-              style: TextStyle(color: Colors.amber,backgroundColor: Colors.cyan),
-              children: [
-                TextSpan(text: "This is me ",style: TextStyle(color: Colors.red,backgroundColor: Colors.green)),
-                TextSpan(text: "YOur Emran ",style: TextStyle(color: Colors.brown,backgroundColor: Colors.white)),
-                TextSpan(text: "Nice to Meet you"),
-              ]
-        ),
-
-        )
-      ),
+            text: "Hello ",
+            style: TextStyle(color: Colors.amber, backgroundColor: Colors.cyan),
+            children: [
+              TextSpan(
+                  text: "This is me ",
+                  style: TextStyle(
+                      color: Colors.red, backgroundColor: Colors.green)),
+              TextSpan(
+                  text: "YOur Emran ",
+                  style: TextStyle(
+                      color: Colors.brown, backgroundColor: Colors.white)),
+              TextSpan(text: "Nice to Meet you"),
+            ]),
+      )),
     );
   }
 }
