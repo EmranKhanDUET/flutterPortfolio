@@ -33,6 +33,7 @@ class HomeUI extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Image.network("https://avatars.githubusercontent.com/u/57840119?v=4",height: 100,width: 100,),
             Image.network("https://avatars.githubusercontent.com/u/57840119?v=4",height: 100,width: 100,),
