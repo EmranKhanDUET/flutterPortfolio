@@ -34,7 +34,10 @@ class HomeUI extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        icon: Icon(Icons.add,color: Colors.white,),
+        icon: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
         backgroundColor: Colors.green,
         // focusColor: Colors.green,
       ),
