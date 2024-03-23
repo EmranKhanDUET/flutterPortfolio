@@ -16,27 +16,60 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeUI extends StatelessWidget {
-  const HomeUI({super.key});
+  HomeUI({super.key});
+
+  ButtonStyle elevatedButtonStyle = ElevatedButton.styleFrom(
+      backgroundColor: Colors.green,
+      foregroundColor: Colors.yellow,
+      padding: EdgeInsets.all(30),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(50)),
+      ));
+
+  mySnackbar(message, delay, context) {
+    return ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        backgroundColor: Colors.green,
+        content: Text(message),
+        duration: Duration(seconds: delay),
+        action: SnackBarAction(
+            label: "OK",
+            textColor: Colors.white,
+            backgroundColor: Colors.red,
+            onPressed: () {}),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("AppBAR"),
         backgroundColor: Colors.green,
+        title: Text("Inventory App"),
+        centerTitle: true,
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
-        label: Text(
-          "ADD TO CART",
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          TextButton(
+              onPressed: () {
+                mySnackbar("Text Button", 2, context);
+              },
+              child: Text("TEXT BUTTON")),
+          ElevatedButton(
+            onPressed: () {
+              mySnackbar("Elevated Button", 2, context);
+            },
+            child: Text("Elevated  BUTTON"),
+            style: elevatedButtonStyle,
           ),
-        ),
-        icon: Icon(Icons.add,color: Colors.white,),
-        backgroundColor: Colors.green,
-        // focusColor: Colors.green,
+          OutlinedButton(
+              onPressed: () {
+                mySnackbar("Outlined Button", 2, context);
+              },
+              child: Text("Outlined BUTTON")),
+        ],
       ),
     );
   }
