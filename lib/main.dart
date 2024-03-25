@@ -80,6 +80,7 @@ class HomeUI extends StatelessWidget {
             onTap: () {mySnackbar(inpItem[index]['title'], 2, context);},
             // onDoubleTap:
             // onLongPress: ,
+            //
             child: Container(
               margin: EdgeInsets.all(10),
               height: 250,
