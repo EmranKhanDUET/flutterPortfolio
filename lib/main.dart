@@ -78,6 +78,8 @@ class HomeUI extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {mySnackbar(inpItem[index]['title'], 2, context);},
+            // onDoubleTap:
+            // onLongPress: ,
             child: Container(
               margin: EdgeInsets.all(10),
               height: 250,
