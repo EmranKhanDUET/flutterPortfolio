@@ -39,9 +39,47 @@ class HomeUI extends StatelessWidget {
       "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
       "title": "Emra5n"
     },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "Emra1n"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "Kha2n"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "Parve3j"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "M4D"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "Emra5n"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "Emra1n"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "Kha2n"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "Parve3j"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "M4D"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "Emra5n"
+    },
   ];
-
-
 
   mySnackbar(message, delay, context) {
     return ScaffoldMessenger.of(context).showSnackBar(
@@ -58,13 +96,12 @@ class HomeUI extends StatelessWidget {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "ListViewBuilder",
+          "GridViewBuilder",
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -73,13 +110,20 @@ class HomeUI extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: ListView.builder(
+      body: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: 0,
+            crossAxisSpacing: 5,
+            childAspectRatio: 1.3),
         itemCount: inpItem.length,
         itemBuilder: (context, index) {
           return GestureDetector(
-            onTap: () {mySnackbar(inpItem[index]['title'], 2, context);},
+            onTap: () {
+              mySnackbar(inpItem[index]['title'], 2, context);
+            },
             child: Container(
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.all(0),
               height: 250,
               width: double.infinity,
               child: Image.network(
