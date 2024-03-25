@@ -66,7 +66,7 @@ class HomeUI extends StatelessWidget {
               child: Text("SUBMIT"),
               style: elevatedButton,
             ),
-          )
+          ),
         ],
       ),
     );
