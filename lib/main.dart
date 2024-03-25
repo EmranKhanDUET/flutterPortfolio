@@ -123,7 +123,7 @@ class HomeUI extends StatelessWidget {
               mySnackbar(inpItem[index]['title'], 2, context);
             },
             child: Container(
-              margin: EdgeInsets.all(2),
+              margin: EdgeInsets.all(1),
               height: 250,
               width: double.infinity,
               child: Image.network(
