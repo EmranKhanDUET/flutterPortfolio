@@ -19,27 +19,28 @@ class HomeUI extends StatelessWidget {
   HomeUI({super.key});
 
   ButtonStyle elevatedButtonStyle = ElevatedButton.styleFrom(
-      backgroundColor: Colors.green,
-      foregroundColor: Colors.yellow,
-      padding: EdgeInsets.all(30),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(50)),
-      ));
-
-  mySnackbar(message, delay, context) {
-    return ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        backgroundColor: Colors.green,
-        content: Text(message),
-        duration: Duration(seconds: delay),
-        action: SnackBarAction(
-            label: "OK",
-            textColor: Colors.white,
-            backgroundColor: Colors.red,
-            onPressed: () {}),
+    backgroundColor: Colors.amber,
+    foregroundColor: Colors.white,
+    minimumSize: Size(double.infinity, 50),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10),
+      side: BorderSide(
+        width: 5,
+        color: Colors.green,
       ),
-    );
-  }
+    ),
+    // padding: EdgeInsets.all(20),
+    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
+    textStyle: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+  );
+
+  ButtonStyle textButtonStyle = TextButton.styleFrom(
+    foregroundColor: Colors.red,
+    textStyle: TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -49,29 +50,24 @@ class HomeUI extends StatelessWidget {
         title: Text("Inventory App"),
         centerTitle: true,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          TextButton(
-              onPressed: () {
-                mySnackbar("Text Button", 2, context);
-              },
-              child: Text("TEXT BUTTON")),
-          ElevatedButton(
-            onPressed: () {
-              mySnackbar("Elevated Button", 2, context);
-            },
-            child: Text("Elevated  BUTTON"),
-            style: elevatedButtonStyle,
-          ),
-          OutlinedButton(
-              onPressed: () {
-                mySnackbar("Outlined Button", 2, context);
-              },
-              child: Text("Outlined BUTTON")),
-
-
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              onPressed: () {},
+              child: Text("TEXT BUTTON"),
+              style: textButtonStyle,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Elevated  BUTTON"),
+              style: elevatedButtonStyle,
+            ),
+            OutlinedButton(onPressed: () {}, child: Text("Outlined BUTTON")),
+            IconButton(onPressed: (){}, icon: Icon(Icons.add_circle,color: Colors.purple,size: 100,))
+          ],
+        ),
       ),
     );
   }
