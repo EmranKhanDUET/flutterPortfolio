@@ -1,3 +1,9 @@
+// GetsureDetector => anything can be convertable into an button ,but there won't be any splash
+// InkWll => same as GetsureDetector ,also splash will be seen
+// For minimum power consumtion and optimized performance, we should try to use inkwell insted of getsureDetector
+
+
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,30 +24,6 @@ class MyApp extends StatelessWidget {
 class HomeUI extends StatelessWidget {
   HomeUI({super.key});
 
-  ButtonStyle elevatedButtonStyle = ElevatedButton.styleFrom(
-    backgroundColor: Colors.amber,
-    foregroundColor: Colors.white,
-    minimumSize: Size(double.infinity, 50),
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(10),
-      side: BorderSide(
-        width: 5,
-        color: Colors.green,
-      ),
-    ),
-    // padding: EdgeInsets.all(20),
-    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
-    textStyle: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-  );
-
-  ButtonStyle textButtonStyle = TextButton.styleFrom(
-    foregroundColor: Colors.red,
-    textStyle: TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.bold,
-    ),
-  );
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,22 +36,33 @@ class HomeUI extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // its all about button
+            GestureDetector(
 
-            TextButton(
-              onPressed: () {},
-              child: Text("TEXT BUTTON"),
-              style: textButtonStyle,
+              onTap: (){print("Tap");},
+              onDoubleTap: (){print("Tap Tap");},
+              onLongPress: (){print("LOng Pressed");},
+              child: Text(
+                "Hello",
+                style: TextStyle(
+                    fontSize: 30, fontWeight: FontWeight.bold, color: Colors.green),
+              ),
             ),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text("Elevated  BUTTON"),
-              style: elevatedButtonStyle,
-            ),
-            OutlinedButton(onPressed: () {}, child: Text("Outlined BUTTON")),
-            IconButton(onPressed: (){}, icon: Icon(Icons.add_circle,color: Colors.purple,size: 100,))
+            InkWell(
+              splashColor: Colors.yellow,
+              radius: 100,
+              borderRadius: BorderRadius.circular(30),
+              onTap: (){print("Tap");},
+              onDoubleTap: (){print("Tap Tap");},
+              onLongPress: (){print("LOng Pressed");},
+              child: Text(
+                "Hello",
+                style: TextStyle(
+                    fontSize: 30, fontWeight: FontWeight.bold, color: Colors.green),
+              ),
+            )
+
           ],
-        ),
+        )
       ),
     );
   }
