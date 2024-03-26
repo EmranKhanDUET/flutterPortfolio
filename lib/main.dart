@@ -1,9 +1,3 @@
-// GetsureDetector => anything can be convertable into an button ,but there won't be any splash
-// InkWll => same as GetsureDetector ,also splash will be seen
-// For minimum power consumtion and optimized performance, we should try to use inkwell insted of getsureDetector
-
-
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,36 +27,16 @@ class HomeUI extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GestureDetector(
+        child: TextField(
+          style: TextStyle(
+            color: Colors.green,
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+          decoration: InputDecoration(
 
-              onTap: (){print("Tap");},
-              onDoubleTap: (){print("Tap Tap");},
-              onLongPress: (){print("LOng Pressed");},
-              child: Text(
-                "Hello",
-                style: TextStyle(
-                    fontSize: 30, fontWeight: FontWeight.bold, color: Colors.green),
-              ),
-            ),
-            InkWell(
-              splashColor: Colors.yellow,
-              radius: 100,
-              borderRadius: BorderRadius.circular(30),
-              onTap: (){print("Tap");},
-              onDoubleTap: (){print("Tap Tap");},
-              onLongPress: (){print("LOng Pressed");},
-              child: Text(
-                "Hello",
-                style: TextStyle(
-                    fontSize: 30, fontWeight: FontWeight.bold, color: Colors.green),
-              ),
-            )
-
-          ],
-        )
+          ),
+        ),
       ),
     );
   }
