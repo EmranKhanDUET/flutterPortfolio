@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/fragments/homeFragment.dart';
 
 void main() {
   runApp(MyApp());
@@ -149,6 +150,7 @@ class HomeUI extends StatelessWidget {
           ],
         ),
       ),
+      body: homeFragment(),
     );
   }
 }
