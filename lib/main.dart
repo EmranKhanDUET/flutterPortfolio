@@ -34,7 +34,7 @@ class HomeUI extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => Activity1(),
+                    builder: (context) => Activity1("This is from Home to Activity 1"),
                   ),
                 );
               },
@@ -44,7 +44,7 @@ class HomeUI extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => Activity2(),
+                    builder: (context) => Activity2("This is from Home to Activity 2"),
                   ),
                 );
               },
@@ -57,13 +57,14 @@ class HomeUI extends StatelessWidget {
 }
 
 class Activity1 extends StatelessWidget {
-  const Activity1({super.key});
+  String msg;
+  Activity1(this.msg,{super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Activity 1"),
+        title: Text(msg),
         backgroundColor: Colors.green,
       ),
       body: Center(
@@ -82,7 +83,7 @@ class Activity1 extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => Activity2(),
+                    builder: (context) => Activity2("This is from Activity 1 to Activity 2"),
                   ),
                 );
               },
@@ -92,14 +93,17 @@ class Activity1 extends StatelessWidget {
       ),
     );
   }
-}class Activity2 extends StatelessWidget {
-  const Activity2({super.key});
+}
+
+class Activity2 extends StatelessWidget {
+  String msg;
+   Activity2(this.msg,{super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Go Activity2 "),
+        title: Text(msg),
         backgroundColor: Colors.green,
       ),
       body: Center(
@@ -112,7 +116,7 @@ class Activity1 extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => Activity1(),
+                    builder: (context) => Activity1("This is from Activity 2 to Activity 1"),
                   ),
                 );
               },
