@@ -70,15 +70,12 @@ class Activity1 extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              child: Text("Home"),
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => HomeUI(),
-                  ),
-                );
-              },
+            Text(
+              "Activity 1",
+              style: TextStyle(
+                  color: Colors.green,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40),
             ),
             ElevatedButton(
               child: Text("ACTIVITY 2"),
@@ -102,15 +99,16 @@ class Activity1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Activity2 "),
+        title: Text("Go Activity2 "),
         backgroundColor: Colors.green,
       ),
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text("Activity 1",style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold,fontSize: 40),),
             ElevatedButton(
-              child: Text("ACTIVITY 1"),
+              child: Text("Go ACTIVITY 1"),
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
@@ -119,16 +117,7 @@ class Activity1 extends StatelessWidget {
                 );
               },
             ),
-            ElevatedButton(
-              child: Text("Home"),
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => HomeUI(),
-                  ),
-                );
-              },
-            ),
+
           ],
         ),
       ),
