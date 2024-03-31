@@ -1,4 +1,7 @@
 // Module7Prerecorded35~36
+// Module7Class3
+
+// ListView is nothing but a column with SingleChildScrollView widged in rapped condition
 
 import 'package:flutter/material.dart';
 
@@ -12,69 +15,173 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Practice App",
-      theme: ThemeData(primarySwatch: Colors.green),
-      darkTheme: ThemeData(primarySwatch: Colors.brown),
       home: HomeUI(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
 
 class HomeUI extends StatelessWidget {
-  const HomeUI({super.key});
+  HomeUI({super.key});
 
-  mySnackbar(message, delay, context) {
-    return ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-        duration: Duration(seconds: delay),
-        action: SnackBarAction(
-            label: "OK",
-            textColor: Colors.white,
-            backgroundColor: Colors.green,
-            onPressed: () {}),
-      ),
-    );
-  }
+  var inpItem = [
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "Emra1n"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "Kha2n"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "Parve3j"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "M4D"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/57840119?v=4",
+      "title": "Emra5n"
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Progress Indicator",
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
+        title: Text("ListViewBuilderSeparator"),
         backgroundColor: Colors.green,
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CircularProgressIndicator(
-              color: Colors.green,
-              backgroundColor: Colors.red,
-              strokeWidth: 10,
+
+      // body: SingleChildScrollView(
+      //   child: Column(
+      //     children: [
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //       Text("Hello",style: TextStyle(fontSize: 40,),),
+      //
+      //     ],
+      //   ),
+      // ),
+
+      // body: ListView(
+      //   scrollDirection: Axis.vertical,
+      //   children: [
+      //     Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //           Text("Hello",style: TextStyle(fontSize: 40,),),
+      //
+      //   ],
+      // ),
+
+      // body: ListView.builder(
+      //   itemCount: inpItem.length,
+      //   itemBuilder: (context, index) {
+      //     return GestureDetector(
+      //       onTap: () {print(inpItem[index]['title']);},
+      //       // onDoubleTap:
+      //       // onLongPress: ,
+      //       //
+      //       child: Container(
+      //         margin: EdgeInsets.all(10),
+      //         height: 250,
+      //         width: double.infinity,
+      //         child: Image.network(
+      //           inpItem[index]["img"]!,
+      //           fit: BoxFit.fill,
+      //         ),
+      //       ),
+      //     );
+      //   },
+      // ),
+
+      // body: ListView.builder(
+      //   itemCount: 15,
+      //   itemBuilder: (context, index) {
+      //     return Padding(
+      //       padding: EdgeInsets.all(20),
+      //       child: Column(
+      //         children: [
+      //           Text(
+      //             "Hello ${index + 1}",
+      //             style: TextStyle(fontSize: 20),
+      //             textAlign: TextAlign.start,
+      //           ),
+      //           Divider(
+      //             height: 10,
+      //             thickness: 10,
+      //             color: Colors.pink,
+      //             indent: 25,
+      //             endIndent: 50,
+      //           )
+      //         ],
+      //       ),
+      //     );
+      //   },
+      // ),
+
+      body: ListView.separated(
+        itemCount: 15,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: EdgeInsets.all(20),
+            child: Column(
+              children: [
+                Text(
+                  "Hello ${index + 1}",
+                  style: TextStyle(fontSize: 20),
+                  textAlign: TextAlign.start,
+                ),
+              ],
             ),
-            Text(
-              "Circular Progress Indicator",
-              style: TextStyle(color: Colors.green, fontSize: 30),
-            ),
-            LinearProgressIndicator(
-              color: Colors.green,
-              backgroundColor: Colors.red,
-              minHeight: 5,
-            ),
-            Text(
-              "Linear Progress Indicator",
-              style: TextStyle(color: Colors.green, fontSize: 30),
-            ),
-          ],
-        ),
+          );
+        },
+        separatorBuilder: (context, index) {
+          return Divider(
+            height: 10,
+            thickness: 10,
+            color: Colors.blue,
+            indent: 25,
+            endIndent: 50,
+          );
+        },
+
       ),
     );
   }
