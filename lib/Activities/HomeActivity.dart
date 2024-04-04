@@ -23,15 +23,30 @@ class _HomeActivityState extends State<HomeActivity> {
           style: const TextStyle(fontSize: 40),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          n++;
-          setState(() {
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: () {
+              n--;
+              setState(() {
 
-          });
-        },
-        child: Icon(Icons.add),
-      ),
+              });
+            },
+            child: Icon(Icons.remove),
+          ),
+          SizedBox(width: 10,),
+          FloatingActionButton(
+            onPressed: () {
+              n++;
+              setState(() {
+
+              });
+            },
+            child: Icon(Icons.add),
+          ),
+        ],
+      )
     );
   }
 }
