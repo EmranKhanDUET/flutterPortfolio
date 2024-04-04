@@ -80,6 +80,13 @@ class HomeUI extends StatelessWidget {
       "title": "Emra5n"
     },
   ];
+  List<String> studentList = [
+    'Jahid',
+    'Nayeem',
+    'Abir',
+    'Hasan',
+    'Tonu'
+  ];
 
   mySnackbar(message, delay, context) {
     return ScaffoldMessenger.of(context).showSnackBar(
@@ -110,29 +117,85 @@ class HomeUI extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            mainAxisSpacing: 0,
-            crossAxisSpacing: 5,
-            childAspectRatio: 1.3),
-        itemCount: inpItem.length,
-        itemBuilder: (context, index) {
-          return GestureDetector(
-            onTap: () {
-              mySnackbar(inpItem[index]['title'], 2, context);
-            },
-            child: Container(
-              margin: EdgeInsets.all(1),
-              height: 250,
-              width: double.infinity,
-              child: Image.network(
-                inpItem[index]["img"]!,
-                fit: BoxFit.fill,
-              ),
-            ),
-          );
-        },
+      // body: GridView.builder(
+      //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      //       crossAxisCount: 2,
+      //       mainAxisSpacing: 0,
+      //       crossAxisSpacing: 5,
+      //       childAspectRatio: 1.3),
+      //   itemCount: inpItem.length,
+      //   itemBuilder: (context, index) {
+      //     return GestureDetector(
+      //       onTap: () {
+      //         mySnackbar(inpItem[index]['title'], 2, context);
+      //       },
+      //       child: Container(
+      //         margin: EdgeInsets.all(1),
+      //         height: 250,
+      //         width: double.infinity,
+      //         child: Image.network(
+      //           inpItem[index]["img"]!,
+      //           fit: BoxFit.fill,
+      //         ),
+      //       ),
+      //     );
+      //   },
+      // ),
+
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ListView.builder(
+              shrinkWrap: false,
+                primary: false,
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return Text("Roll : ${index + 1}",style: TextStyle(fontSize: 40,color: Colors.blue,),);
+                }),
+
+            // ListView.builder(
+            //   shrinkWrap: true,
+            //   primary: false,
+            //   itemCount: studentList.length,
+            //   itemBuilder: (context, index) {
+            //     return Padding(
+            //       padding: const EdgeInsets.all(8.0),
+            //       child: Column(
+            //         children: [
+            //           Text(
+            //             studentList[index],
+            //             style: TextStyle(fontSize: 18),
+            //           ),
+            //           Divider()
+            //         ],
+            //       ),
+            //     );
+            //   },
+            // ),
+
+
+
+            // GridView.builder(
+            //   shrinkWrap: true,
+            //   primary: false,
+            //   itemCount: 20,
+            //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            //     crossAxisCount: 2,
+            //     mainAxisSpacing: 20,
+            //     crossAxisSpacing: 20,
+            //     childAspectRatio: 1.5,
+            //   ),
+            //   itemBuilder: (context, index) {
+            //     return Center(
+            //       child: Text(
+            //         "Serial : ${index + 1}",
+            //         style: TextStyle(fontSize: 20),
+            //       ),
+            //     );
+            //   },
+            // ),
+          ],
+        ),
       ),
     );
   }
