@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-
-import 'HomeUI.dart';
+import 'package:flutter_portfolio/HomeUI.dart';
 
 void main(){
-  runApp(const CounterApp());
+  runApp(const PracticeApp());
 }
 
-class CounterApp extends StatelessWidget {
-  const CounterApp({super.key});
+class PracticeApp extends StatelessWidget {
+  const PracticeApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: HomeUI(),
       debugShowCheckedModeBanner: false,
+      title: "",
     );
   }
 }
