@@ -18,7 +18,7 @@ class HomeUI extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(20),
               child: Text(
                 "Welcome to My Photo Gallery",
