@@ -17,13 +17,17 @@ class HomeUI extends StatelessWidget {
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          Expanded(child: Container(color: Colors.red,),flex:1),
-          Expanded(child: Container(color: Colors.yellow,),flex:1),
-          Expanded(child: Container(color: Colors.brown,),flex:1),
-          Expanded(child: Container(color: Colors.green,),flex:1),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("${MediaQuery.sizeOf(context)}",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold),),
+            Text("${MediaQuery.of(context).size.width}",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold),),
+            Text("${MediaQuery.of(context).size.height}",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold),),
+            Text("${MediaQuery.orientationOf(context)}",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold),),
+            Text("${MediaQuery.of(context).orientation}",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold),),
+          ],
+        ),
       )
     );
   }
