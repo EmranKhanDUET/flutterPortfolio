@@ -1,3 +1,6 @@
+// Expanded => pura display k ekta row/column e niye flex onusare divide kore
+
+
 import 'package:flutter/material.dart';
 
 class HomeUI extends StatelessWidget {
@@ -14,18 +17,13 @@ class HomeUI extends StatelessWidget {
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),
-      body: LayoutBuilder(
-        builder: (BuildContext context,BoxConstraints constraints) {
-          if (constraints.maxWidth <= 400) {
-            return Container(height: 200, width: 200, color: Colors.red,);
-          }
-          else if (constraints.maxWidth <= 600) {
-            return Container(height: 400, width: 500, color: Colors.green,);
-          }
-          else {
-            return Container(height: 800, width: 900, color: Colors.cyan,);
-          }
-        }
+      body: Column(
+        children: [
+          Expanded(child: Container(color: Colors.red,),flex:1),
+          Expanded(child: Container(color: Colors.yellow,),flex:1),
+          Expanded(child: Container(color: Colors.brown,),flex:1),
+          Expanded(child: Container(color: Colors.green,),flex:1),
+        ],
       )
     );
   }
