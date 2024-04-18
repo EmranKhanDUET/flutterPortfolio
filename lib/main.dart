@@ -1,6 +1,11 @@
+// wrap => an extended row which has a feature ,
+// zodi ek line e na dhore taile porer line e
+// pathaia dey
+
+
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
 
@@ -18,23 +23,9 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class HomeUI extends StatelessWidget {
   const HomeUI({super.key});
-
-  MySnackbar(message, delay, context) {
-    return ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-        duration: Duration(seconds: delay),
-        action: SnackBarAction(
-            label: "OK",
-            textColor: Colors.white,
-            backgroundColor: Colors.green,
-            onPressed: () {}),
-      ),
-    );
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -42,19 +33,23 @@ class HomeUI extends StatelessWidget {
       appBar: AppBar(
         title: Text("APPBAR"),
         backgroundColor: Colors.amber,
-        titleSpacing: 10,
-        centerTitle: false,
-        toolbarHeight: 60,
-        toolbarOpacity: 1,
-        elevation: 0,
-        actions: [
-          IconButton(onPressed: (){MySnackbar("Search", 5, context);}, icon: Icon(Icons.search)),
-          IconButton(onPressed: (){MySnackbar("Message", 5, context);}, icon: Icon(Icons.message)),
-          IconButton(onPressed: (){MySnackbar("Email", 5, context);}, icon: Icon(Icons.email)),
-          IconButton(onPressed: (){MySnackbar("Help", 5, context);}, icon: Icon(Icons.help)),
+      ),
+      body: Wrap(
+        alignment: WrapAlignment.center,
+        crossAxisAlignment: WrapCrossAlignment.start,
+        spacing: 10,
+        children: [
+          Text(MediaQuery.orientationOf(context).toString()),
+          Text(MediaQuery.orientationOf(context).toString()),
+          Text(MediaQuery.orientationOf(context).toString()),
+          Text(MediaQuery.orientationOf(context).toString()),
+          Text(MediaQuery.orientationOf(context).toString()),
+          Text(MediaQuery.orientationOf(context).toString()),
+          Text(MediaQuery.orientationOf(context).toString()),
+          Text(MediaQuery.orientationOf(context).toString()),
+          Text(MediaQuery.orientationOf(context).toString()),
         ],
       ),
     );
   }
 }
-
