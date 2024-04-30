@@ -12,7 +12,7 @@ class LandascapeView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 4,
             mainAxisSpacing: 10,
             crossAxisSpacing: 10,
@@ -30,13 +30,13 @@ class LandascapeView extends StatelessWidget {
                       )));
             },
             child: Card(
-              shadowColor: Color(0XFF000000),
+              shadowColor: const Color(0XFF000000),
               elevation: 10,
               color: Colors.green,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
               child: Container(
-                margin: EdgeInsets.all(1),
+                margin: const EdgeInsets.all(1),
                 height: 180,
                 width: 180,
                 decoration: BoxDecoration(
@@ -47,10 +47,11 @@ class LandascapeView extends StatelessWidget {
                       ),
                       fit: BoxFit.fill,
                     )),
-                padding: EdgeInsets.all(30),
+                padding: const EdgeInsets.all(30),
+                alignment: Alignment.bottomLeft,
                 child: Text(
                   data[index]['title']!,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Color(0XFFFFFFFF),
                     fontSize: 20,
                     fontFamily: 'Roboto',
@@ -59,7 +60,6 @@ class LandascapeView extends StatelessWidget {
                   ),
 
                 ),
-                alignment: Alignment.bottomLeft,
               ),
             ),
           );

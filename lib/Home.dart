@@ -142,14 +142,14 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Photo Gallery",
           style: TextStyle(fontFamily: 'Jersey15', fontSize: 30),
         ),
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.more_vert,
               color: Color(0XFFFAFAFA),
             ),
@@ -157,7 +157,7 @@ class Home extends StatelessWidget {
         ],
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(
+          icon: const Icon(
             Icons.chevron_left_rounded,
             color: Color(0XFF7ACA5E),
           ),
@@ -167,8 +167,9 @@ class Home extends StatelessWidget {
         if (orientation == Orientation.portrait) {
           return PortraitView(data: data,);
 
-        } else
+        } else {
           return LandascapeView(data: data,);
+        }
       })
     );
   }

@@ -17,7 +17,7 @@ class PortraitTapView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Card(
-              shadowColor: Color(0XFF000000),
+              shadowColor: const Color(0XFF000000),
               elevation: 30,
               color: Colors.green,
               shape: RoundedRectangleBorder(
@@ -119,13 +119,13 @@ class PortraitTapView extends StatelessWidget {
                             )));
                   },
                   child: Card(
-                    shadowColor: Color(0XFF000000),
+                    shadowColor: const Color(0XFF000000),
                     elevation: 30,
                     color: Colors.green,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30)),
                     child: Container(
-                      margin: EdgeInsets.all(1),
+                      margin: const EdgeInsets.all(1),
                       height: 180,
                       width: 180,
                       decoration: BoxDecoration(

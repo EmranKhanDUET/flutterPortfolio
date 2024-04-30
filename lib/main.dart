@@ -41,5 +41,4 @@ AppBarTheme appBarTheme =
           fontWeight: FontWeight.w600
 
         )
-        // )
         );
