@@ -12,7 +12,7 @@ class LandascapeTapView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -20,7 +20,7 @@ class LandascapeTapView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Card(
-                  shadowColor: Color(0XFF000000),
+                  shadowColor: const Color(0XFF000000),
                   elevation: 30,
                   color: Colors.green,
                   shape: RoundedRectangleBorder(
@@ -53,7 +53,7 @@ class LandascapeTapView extends StatelessWidget {
 
                        child: Text(
                          data[index]['label'],
-                         style: TextStyle(
+                         style: const TextStyle(
                            color: Color(0XFF000000),
                            fontFamily: 'Poppins',
                            fontSize: 24,
@@ -61,25 +61,25 @@ class LandascapeTapView extends StatelessWidget {
                          ),
                        ),
                      ),
-                     SizedBox(
+                     const SizedBox(
                        height: 10,
                      ),
                      SizedBox(
                        width: double.infinity,
                        child: Text(
                          data[index]['description'],
-                         style: TextStyle(
+                         style: const TextStyle(
                              fontWeight: FontWeight.w400,
                              fontSize: 15,
                              fontFamily: 'Poppins'),
                        ),
                      ),
-                     SizedBox(
+                     const SizedBox(
                        height: 20,
                      ),
                      ElevatedButton(
                        onPressed: () {},
-                       child: Text(
+                       child: const Text(
                          'See More',
                          style: TextStyle(
                              fontWeight: FontWeight.w400,
@@ -94,10 +94,10 @@ class LandascapeTapView extends StatelessWidget {
                )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            SizedBox(
+            const SizedBox(
               width: double.infinity,
               child: Text(
                 'Suggestions',
@@ -109,13 +109,13 @@ class LandascapeTapView extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             GridView.builder(
               primary: false,
               shrinkWrap: true,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 4,
                   mainAxisSpacing: 0,
                   crossAxisSpacing: 5,
@@ -133,13 +133,13 @@ class LandascapeTapView extends StatelessWidget {
                             )));
                   },
                   child: Card(
-                    shadowColor: Color(0XFF000000),
+                    shadowColor: const Color(0XFF000000),
                     elevation: 30,
                     color: Colors.green,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30)),
                     child: Container(
-                      margin: EdgeInsets.all(1),
+                      margin: const EdgeInsets.all(1),
                       height: 180,
                       width: 180,
                       decoration: BoxDecoration(
@@ -151,17 +151,17 @@ class LandascapeTapView extends StatelessWidget {
                           fit: BoxFit.fill,
                         ),
                       ),
-                      padding: EdgeInsets.all(30),
+                      padding: const EdgeInsets.all(30),
+                      alignment: Alignment.bottomLeft,
                       child: Text(
                         data[index]['title']!,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Color(0XFFFFFFFF),
                           fontSize: 20,
                           fontFamily: 'Roboto',
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      alignment: Alignment.bottomLeft,
                     ),
                   ),
                 );

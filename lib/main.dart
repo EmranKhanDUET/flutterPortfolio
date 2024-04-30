@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'Home.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: appBarTheme,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color(0XFFB2CAB00),
+            backgroundColor: const Color(0xffb2cab00),
             foregroundColor: Colors.white,
             minimumSize:
                 Size(double.infinity, MediaQuery.of(context).size.height * .1),
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
 }
 
 AppBarTheme appBarTheme =
-    AppBarTheme(centerTitle: true, color: Color(0XFFB2CAB00),
+    const AppBarTheme(centerTitle: true, color: Color(0xffb2cab00),
         titleTextStyle: TextStyle(
           color: Color(0XFFEFEFEF),
           fontFamily: 'Poppins',

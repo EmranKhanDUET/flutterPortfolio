@@ -16,7 +16,7 @@ class TapView extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.more_vert,
               color: Color(0XFFFAFAFA),
             ),
@@ -24,7 +24,7 @@ class TapView extends StatelessWidget {
         ],
         leading: IconButton(
           onPressed: () {Navigator.of(context).pop();},
-          icon: Icon(
+          icon: const Icon(
             Icons.chevron_left_rounded,
             color: Color(0XFF7ACA5E),
           ),
@@ -33,8 +33,9 @@ class TapView extends StatelessWidget {
       body: OrientationBuilder(builder: (context, orientation) {
         if (orientation == Orientation.portrait) {
           return PortraitTapView(index: index, data: data);
-        } else
+        } else {
           return LandascapeTapView(index: index, data: data);
+        }
       })
     );
   }
