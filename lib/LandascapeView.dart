@@ -42,7 +42,7 @@ class LandascapeView extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     image: DecorationImage(
-                      image: NetworkImage(
+                      image: AssetImage(
                         data[index]["link"]!,
                       ),
                       fit: BoxFit.fill,
