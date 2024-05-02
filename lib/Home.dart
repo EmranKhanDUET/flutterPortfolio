@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -27,8 +28,10 @@ class Home extends StatelessWidget {
                   child: CircleAvatar(
                     radius: 100,
                     child: ClipOval(
-                      child: Image.network(
-                        "https://avatars.githubusercontent.com/u/57840119?v=4",
+                      child: CachedNetworkImage(
+                        imageUrl: "https://avatars.githubusercontent.com/u/57840119?v=4",
+                        placeholder: (context, url) => CircularProgressIndicator(),
+                        errorWidget: (context, url, error) => Icon(Icons.error),
                       ),
                     ),
                   ),
