@@ -57,6 +57,7 @@ class LandascapeView extends StatelessWidget {
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
 
+
                   ),
 
                 ),
