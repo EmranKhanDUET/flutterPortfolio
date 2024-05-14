@@ -33,7 +33,6 @@ class _HomeScreenState extends State<HomeScreen> {
       'img': 'assets/images/sportDress.png',
       'itemCount': 1
     },
-
   ];
 
   mySnackMsg(message, delay, context) {
@@ -70,13 +69,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: const TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 18,
+                    fontFamily: 'Inter',
                   ),
                 ),
               ),
             ),
             content: Text(
               content,
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                fontFamily: 'Inter',
+              ),
             ),
             actionsPadding: const EdgeInsets.all(20),
             actions: [
@@ -86,7 +90,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                   child: Text(
                     button,
-                    style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'Inter',
+                      color: Colors.white,
+                      ),
                   )),
             ],
           );
@@ -140,7 +149,10 @@ class _HomeScreenState extends State<HomeScreen> {
               width: double.infinity,
               child: Text(
                 'My Bag',
-                style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 34,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Metropolis'),
               )),
           SizedBox(
             height: MediaQuery.of(context).size.height * .02,
@@ -175,8 +187,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Text(
                                   itemList[index]['name'],
                                   style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                    fontFamily: 'Metropolis',
+                                  ),
                                 ),
                               ),
                               SizedBox(
@@ -185,26 +199,36 @@ class _HomeScreenState extends State<HomeScreen> {
                                   children: [
                                     const Text(
                                       'Color: ',
-                                      style: TextStyle(fontSize: 11),
+                                      style: TextStyle(
+                                        fontSize: 11,
+                                        fontFamily: 'Metropolis',
+                                      ),
                                     ),
                                     Text(
                                       itemList[index]['color'],
                                       style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 11),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 11,
+                                        fontFamily: 'Metropolis',
+                                      ),
                                     ),
                                     const SizedBox(
                                       width: 15,
                                     ),
                                     const Text(
                                       'Size: ',
-                                      style: TextStyle(fontSize: 11),
+                                      style: TextStyle(
+                                        fontSize: 11,
+                                        fontFamily: 'Metropolis',
+                                      ),
                                     ),
                                     Text(
                                       itemList[index]['size'],
                                       style: const TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 11),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 11,
+                                        fontFamily: 'Metropolis',
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -246,6 +270,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                                       .toString(),
                                                   style: const TextStyle(
                                                     fontWeight: FontWeight.bold,
+                                                    fontSize: 14,
+                                                    fontFamily: 'Metropolis',
                                                   ),
                                                 ),
                                               ),
@@ -287,7 +313,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 '${itemList[index]['price']}\$',
                                 style: const TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 14),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 14,
+                                  fontFamily: 'Metropolis',
+                                ),
                               )
                             ],
                           ))
@@ -301,6 +330,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
   Padding _bottomNavBar(BuildContext context, List itemList) {
     num totalPrice() {
       num total = 0;
@@ -322,11 +352,21 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text('Total Amount'),
+                  const Text(
+                    'Total Amount',
+                    style: TextStyle(
+                      color: Color(0XFF9B9B9B),
+                      fontSize: 14,
+                      fontFamily: 'Metropolis',
+                    ),
+                  ),
                   Text(
                     '${totalPrice().toString()}\$',
                     style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 18),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      fontFamily: 'Metropolis',
+                    ),
                   ),
                 ],
               ),
@@ -338,7 +378,14 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {
                 mySnackMsg('Congratulations !', 2, context);
               },
-              child: const Text("CHECK OUT"),
+              child: const Text(
+                "CHECK OUT",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontFamily: 'Metropolis',
+                ),
+              ),
             )
           ],
         ),
