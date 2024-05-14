@@ -20,8 +20,7 @@ class MyApp extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0XFFDB3022),
             foregroundColor: Colors.white,
-            minimumSize:
-                Size(double.infinity, MediaQuery.of(context).size.height * .1),
+            minimumSize: Size(double.infinity, 46),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
@@ -32,13 +31,11 @@ class MyApp extends StatelessWidget {
   }
 }
 
-AppBarTheme appBarTheme =
-    const AppBarTheme(centerTitle: true, color: Colors.white,
-        titleTextStyle: TextStyle(
-          color: Color(0XFFEFEFEF),
-          fontFamily: 'Poppins',
-          fontSize: 20,
-          fontWeight: FontWeight.w600
-
-        )
-        );
+AppBarTheme appBarTheme = const AppBarTheme(
+    centerTitle: true,
+    color: Colors.white,
+    titleTextStyle: TextStyle(
+        color: Color(0XFFEFEFEF),
+        fontFamily: 'Poppins',
+        fontSize: 20,
+        fontWeight: FontWeight.w600));
