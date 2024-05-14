@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
       'color': 'Gray',
       'size': 'L',
       'price': '30',
-      'img': 'assets/images/tshirt.png',
+      'img': 'assets/images/shirt.png',
       'itemCount': 1
     },
     {
@@ -30,36 +30,13 @@ class _HomeScreenState extends State<HomeScreen> {
       'color': 'Black',
       'size': 'M',
       'price': '43',
-      'img': 'assets/images/sportdress.png',
+      'img': 'assets/images/sportDress.png',
       'itemCount': 1
     },
-    {
-      'name': 'Pullover',
-      'color': 'Black',
-      'size': 'L',
-      'price': '51',
-      'img': 'assets/images/pullover.png',
-      'itemCount': 1
-    },
-    {
-      'name': 'T-Shirt',
-      'color': 'Gray',
-      'size': 'L',
-      'price': '30',
-      'img': 'assets/images/tshirt.png',
-      'itemCount': 1
-    },
-    {
-      'name': 'Sport Dress',
-      'color': 'Black',
-      'size': 'M',
-      'price': '43',
-      'img': 'assets/images/sportdress.png',
-      'itemCount': 1
-    },
+
   ];
 
-  mySnackbar(message, delay, context) {
+  mySnackMsg(message, delay, context) {
     return ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         backgroundColor: Colors.red,
@@ -119,6 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
@@ -323,7 +301,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
   Padding _bottomNavBar(BuildContext context, List itemList) {
     num totalPrice() {
       num total = 0;
@@ -359,7 +336,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             ElevatedButton(
               onPressed: () {
-                mySnackbar('Congratulations !', 2, context);
+                mySnackMsg('Congratulations !', 2, context);
               },
               child: const Text("CHECK OUT"),
             )

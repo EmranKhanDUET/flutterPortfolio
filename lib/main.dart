@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
       home: const HomeScreen(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        appBarTheme: appBarTheme,
+        appBarTheme: const AppBarTheme(
+          color: Colors.white
+        ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0XFFDB3022),
@@ -31,11 +33,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-AppBarTheme appBarTheme = const AppBarTheme(
-    centerTitle: true,
-    color: Colors.white,
-    titleTextStyle: TextStyle(
-        color: Color(0XFFEFEFEF),
-        fontFamily: 'Poppins',
-        fontSize: 20,
-        fontWeight: FontWeight.w600));
