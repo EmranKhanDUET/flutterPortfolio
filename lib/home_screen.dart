@@ -90,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Center(
                 child: Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 18,
                   ),
@@ -99,9 +99,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             content: Text(
               content,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
             ),
-            actionsPadding: EdgeInsets.all(20),
+            actionsPadding: const EdgeInsets.all(20),
             actions: [
               ElevatedButton(
                   onPressed: () {
@@ -109,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                   child: Text(
                     button,
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                    style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
                   )),
             ],
           );
@@ -354,7 +354,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
             ElevatedButton(

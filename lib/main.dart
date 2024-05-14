@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeScreen(),
+      home: const HomeScreen(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: appBarTheme,
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0XFFDB3022),
             foregroundColor: Colors.white,
-            minimumSize: Size(double.infinity, 46),
+            minimumSize: const Size(double.infinity, 46),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
