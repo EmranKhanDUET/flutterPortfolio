@@ -66,7 +66,7 @@ class _PhotoGalleryScreenState extends State<PhotoGalleryScreen> {
     }
     else{
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.red,
           content: Text('Get Photo List Faild,Try again !')));
     }
 
