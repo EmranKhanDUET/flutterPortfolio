@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/photo.dart';
 
 class PhotoDetails extends StatelessWidget {
-  String title;
-  int id;
-  String url;
-   PhotoDetails({required this.title, required this.id,required this.url, super.key});
+  final String title;
+  final int id;
+  final String url;
+   const PhotoDetails({required this.title, required this.id,required this.url, super.key});
 
   
   
   
   @override
   Widget build(BuildContext context) {
-    var photo;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Photo Details'),
+        title: const Text('Photo Details'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -26,9 +24,9 @@ class PhotoDetails extends StatelessWidget {
               children: [
                 Image.network(url),
                 const SizedBox(height: 10,),
-                Text('Title: $title',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
+                Text('Title: $title',style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
                 const SizedBox(height: 10,),
-                Text('ID: $id',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
+                Text('ID: $id',style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
 
 
               ],
